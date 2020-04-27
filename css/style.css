@@ -80,7 +80,7 @@ div .text-bloc h5{
     }
 }
 
-/* @media screen and (max-width : 765px ){
+@media screen and (max-width : 765px ){
     div .text-bloc{
         bottom: 0;
         transform: initial;
@@ -88,4 +88,4 @@ div .text-bloc h5{
         color: white;
         padding: 10px;
     }
-} */
+}
