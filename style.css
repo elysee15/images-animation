@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+
+div .slideshow{
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-item{
+    position: absolute;
+    opacity: 0;
+    animation: cycle 31s infinite;
+}
+
+.slide-item:nth-child(1),
+.slide-item:nth-child(1) img{
+    animation-delay: 0s;
+}
+
+.slide-item:nth-child(2),
+.slide-item:nth-child(2) img{
+    animation-delay: 10s;
+}
+
+.slide-item:nth-child(3),
+.slide-item:nth-child(3) img{
+    animation-delay: 20s;
+}
+
+.slide-item:nth-child(4),
+.slide-item:nth-child(4) img{
+    animation-delay: 30s;
+}
+
+
+div .slide-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    animation: zoom-in 31s infinite;
+    
+}
+
+div .text-bloc{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 50vw;
+    color: white;
+    padding: 50px;
+}
+
+div .text-bloc h5{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+@keyframes cycle {
+    25%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+}
+
+@keyframes zoom-in{
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+/* @media screen and (max-width : 765px ){
+    div .text-bloc{
+        bottom: 0;
+        transform: initial;
+        max-width: 100%;
+        color: white;
+        padding: 10px;
+    }
+} */
